@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <isle class="root"></isle>
+    <isle></isle>
   </div>
 </template>
 
@@ -15,8 +15,4 @@ export default {
 </script>
 
 <style>
-#app {
-  width: 100%;
-  height: 100%;
-}
 </style>
