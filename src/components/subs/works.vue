@@ -16,11 +16,11 @@ export default {
         text: ''
       }, {
         title: 'conoon',
-        imageUrl: 'https://cdn.pixabay.com/photo/2016/11/22/19/10/adventure-1850094__340.jpg',
+        imageUrl: 'https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519__340.jpg',
         text: ''
       }, {
         title: 'conoon',
-        imageUrl: 'https://cdn.pixabay.com/photo/2018/03/02/18/56/digital-art-3193935__340.jpg',
+        imageUrl: 'https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823__340.jpg',
         text: ''
       }]
     }
@@ -34,7 +34,7 @@ export default {
 <style lang="stylus">
 .work-list-image {
   padding: 4rem 2rem;
-  width: 20rem;
+  width: 32rem;
 
   @media screen and (max-width: 768px) {
     width: 80%;
