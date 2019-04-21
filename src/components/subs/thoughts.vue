@@ -1,7 +1,10 @@
 <template>
   <div>
-    here is about page
-    <div v-for="(item,index) in thoughtsList" :key="index">{{index + 1}} - {{item.text}}</div>
+    <div
+      class="thought-item"
+      v-for="(item,index) in thoughtsList"
+      :key="index"
+    >{{index + 1}}. {{item.text}}</div>
   </div>
 </template>
 
@@ -10,13 +13,13 @@ export default {
   data () {
     return {
       thoughtsList: [{
-        text: 'thought-1'
+        text: 'keep me as independency'
       }, {
-        text: 'thought-2'
+        text: 'to buy a chear fit for coder'
       }, {
-        text: 'thought-3'
+        text: 'coding is an art'
       }, {
-        text: 'thought-4'
+        text: 'service me and everyone'
       }]
     }
   },
@@ -26,4 +29,8 @@ export default {
 }
 </script>
 
-<style module lang="stylus"></style>
+<style lang="stylus">
+.thought-item {
+  padding 1rem 2rem
+}
+</style>
