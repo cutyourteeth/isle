@@ -14,7 +14,7 @@ export default {
       works: [{
         title: 'conoon',
         imageUrl: 'https://cdn.pixabay.com/photo/2017/01/15/19/04/red-panda-1982445__340.jpg',
-        text: 'the coon:\n\nOne of the coons run out of your mind'
+        text: 'the coon:\n\nOne of the coons just ran out of your mind'
       }, {
         title: 'the woods',
         imageUrl: 'https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519__340.jpg',

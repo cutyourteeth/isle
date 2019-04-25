@@ -13,7 +13,7 @@ export default {
   data () {
     return {
       thoughtsList: [{
-        text: 'keep me as independency'
+        text: 'keep me as an independency'
       }, {
         text: 'to buy a chear fit for coder'
       }, {
