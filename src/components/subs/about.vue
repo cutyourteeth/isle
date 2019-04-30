@@ -2,6 +2,11 @@
   <div class="about">
     I am
     <a href="https://cutyourteeth.github.io/dist">here</a>
+  <div class="contact-list">
+    <div class="contact-tel"></div>
+    <div class="contact-mail"></div>
+    <div class="contact-address"></div>
+  </div>
   </div>
 </template>
 
