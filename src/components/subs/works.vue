@@ -1,7 +1,7 @@
 <template>
   <div class="work-wrapper">
     <div class="work-list-item" v-for="(work,index) in works" :key="index">
-      <img :src="work.imageUrl" class="work-list-image">
+      <img :src="work.imageUrl" class="work-list-image" alt="A pictrue">
       <div class="work-list-text">{{work.text}}</div>
     </div>
   </div>
@@ -36,8 +36,9 @@ export default {
   overflow: hidden;
 }
 
-.work-list-image {
-  padding: 4rem 2rem;
+.work-list-image, .work-list-text {
+  padding: 4rem 0 0 2rem;
+  box-sizing: border-box;
   width: 32rem;
 
   @media screen and (max-width: 768px) {
@@ -47,16 +48,11 @@ export default {
 
 .work-list-text {
   top: 0;
+  margin: 4rem 0 0 2rem;
   opacity: 0;
-  width: 32rem;
-  height: 80%;
+  height: 100%;
   position: absolute;
-  padding: 6rem 4rem;
   white-space: pre-wrap;
-
-  @media screen and (max-width: 768px) {
-    width: 80%;
-  }
 }
 
 .work-list-text:hover, .work-list-image:hover~.work-list-text {
