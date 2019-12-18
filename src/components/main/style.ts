@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const HomeWrapper = styled.div`
   position: relative;
   color: white;
+  min-height: 120vh;
   
   .title {
     padding: 10rem 2rem 4rem;
