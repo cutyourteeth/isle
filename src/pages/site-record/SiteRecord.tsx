@@ -13,7 +13,7 @@ export const SiteRecord = () => {
                     ✨
                 </span>
             </p>
-            <br />
+            <br/>
             <p>
                 Written by Caper with passion and&nbsp;
                 <span role="img" aria-label="emoji">

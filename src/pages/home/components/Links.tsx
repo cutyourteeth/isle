@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const Links = () => {
   return (
     <LinksWrapper>
-      <Link to="/work" className="link">
+      <Link to="/graphs" className="link">
         Graphs
       </Link>
       <Link to="/thoughts" className="link">
@@ -28,11 +28,10 @@ const LinksWrapper = styled.div`
     color: gray;
     font-weight: bold;
     text-decoration: none;
-    transition: background-color 0.15s linear, color 0.15s linear;
     &:hover {
       color: #2dc6ad;
       filter: hue-rotate();
-      animation: hue-trans 5s infinite;
+      animation: hue-trans 7s infinite;
     }
   }
 `;
