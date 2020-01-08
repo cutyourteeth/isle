@@ -140,7 +140,7 @@ body {
   /* width: 100vw; */
   min-height: 100vh;
   /* overflow-x: hidden; */
-  font-family: 'GT America', sans-serif;
+  font-family: Helvetica, sans-serif, 'GT America', sans-serif;
   background-color: rgb(17, 17, 17);
 }
 

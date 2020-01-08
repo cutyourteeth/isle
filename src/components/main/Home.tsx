@@ -3,12 +3,14 @@ import { HashRouter, Link, Route, Switch } from "react-router-dom";
 import { About } from "../subs/About";
 import { Thoughts } from "../subs/Thoughts";
 import { Works } from "../subs/Works";
+// import "./style.scss";
 import { HomeWrapper } from "./style";
 
 export const Home = () => {
   const showMenu = () => {};
 
   return (
+    // <div className="wrapper">
     <HomeWrapper>
       <HashRouter>
         <div className="header">
@@ -34,9 +36,9 @@ export const Home = () => {
         </div>
 
         <div className="title">
-          <h1>lean on the tree</h1>
-          <h1>Yeah, full of pillows</h1>
-          <p>Minds shall reset, then dream wild</p>
+          <h1>Be a man,</h1>
+          <h1>Half blind</h1>
+          <p>Soul shall rest, don't take too much</p>
         </div>
 
         <div className="main-view">
@@ -48,5 +50,7 @@ export const Home = () => {
         </div>
       </HashRouter>
     </HomeWrapper>
+
+    // </div>
   );
 };

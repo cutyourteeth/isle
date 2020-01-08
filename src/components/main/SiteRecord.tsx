@@ -46,7 +46,7 @@ const SiteInfo = styled.div`
 
 const Anchor = styled.a`
   padding: 1rem 2rem;
-  font-size: 8px;
+  font-size: 12px;
   color: dimgray;
   &:hover {
     color: #eee;
