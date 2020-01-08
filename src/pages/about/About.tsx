@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 export const About = () => {
   return (
@@ -13,3 +14,17 @@ export const About = () => {
     </div>
   );
 };
+
+export const AboutWrapper = styled.div`
+  font-size: 1.5rem;
+  color: rgb(78, 78, 78, 0.6);
+  padding: 2rem;
+
+  &:hover {
+    color: rgb(178, 178, 178, 0.6);
+
+    & > a {
+      color: white;
+    }
+  }
+`;

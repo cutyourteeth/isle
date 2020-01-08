@@ -9,3 +9,17 @@
     opacity: 1;
   }
 }
+
+@keyframes hue-trans {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(180deg);
+  }
+
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}

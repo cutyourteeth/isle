@@ -1,66 +1,35 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+export const HamButton = () => {
+  const showMenu = () => {};
 
-export const HomeWrapper = styled.div`
-  position: relative;
-  color: white;
-  min-height: 120vh;
-  
-  .title {
-    padding: 10rem 2rem 4rem;
+  return (
+    <HamWrapper>
+      <i className="header-ham-button" onClick={showMenu} aria-label="menu"></i>
+      <div className="header-links">
+        <Link to="/work" className="header-link">
+          WORK
+        </Link>
+        <Link to="/thoughts" className="header-link">
+          THOUGHTS
+        </Link>
+        <Link to="/about" className="header-link">
+          ABOUT
+        </Link>
+      </div>
+    </HamWrapper>
+  );
+};
 
-    & > h1 {
-      font-size: 50px;
-      line-height: 25px;
-      font-weight: 600;
-      line-height: 1.25;
-      text-transform: uppercase;
-      letter-spacing: 0.1rem;
-      font-size: 1.375rem;
-    }
-
-    & > p {
-      font-size: 25px;
-      line-height: 12px;
-      line-height: 2;
-      padding-top: 0.5rem;
-      font-size: 0.85rem;
-    }
-  }
-  .main-view{
-    min-height:calc(100vh - 400px);
-  }
-  .header {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    height: 4rem;
-    line-height: 4rem;
-    padding: 0 2rem;
-    text-transform: uppercase;
-    box-sizing: border-box;
-    color: rgb(102, 102, 102);
-
-    .header-left {
-      letter-spacing: 0.2rem;
-
-      &:hover {
-        color: white;
-      }
-    }
-
-    .header-right {
-      display: flex;
-      flex-flow: row;
-      position: relative;
-      justify-content: center;
-
-      .header-links>* {
+const HamWrapper = styled.div`
+.header-links > * {
         margin-left: 1rem;
         letter-spacing: 0.1rem;
       }
 
-      .header-links>*:hover {
+      .header-links > *:hover {
         color: white;
       }
 
@@ -80,7 +49,7 @@ export const HomeWrapper = styled.div`
         cursor: pointer;
 
         &:after {
-          content: '';
+          content: "";
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
@@ -127,7 +96,8 @@ export const HomeWrapper = styled.div`
           visibility: visible;
         }
 
-        .header-ham-button:hover ~ .header-links, .header-links:hover {
+        .header-ham-button:hover ~ .header-links,
+        .header-links:hover {
           opacity: 1;
           visibility: visible;
           border-top: none;
@@ -136,5 +106,4 @@ export const HomeWrapper = styled.div`
         }
       }
     }
-  }
-`
+`;

@@ -137,11 +137,13 @@ table {
 /* custom */
 html,
 body {
-  /* width: 100vw; */
+  user-select: none;
   min-height: 100vh;
-  /* overflow-x: hidden; */
+  background-color: #171717;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,span{
   font-family: Helvetica, sans-serif, 'GT America', sans-serif;
-  background-color: rgb(17, 17, 17);
 }
 
 a,
