@@ -1,12 +1,12 @@
-import axios, { AxiosResponse } from 'axios'
+import axios, { AxiosResponse } from 'axios';
 
-export interface RecordDto {
-    [propsName: string]: { secondHandedAmount: string }
+export interface RecordData {
+    [propName: string]: { timestamp: string; value: string };
 }
 
 export interface EstateDataDto {
     id: number
-    record: RecordDto
+    record: RecordData
     createAt?: string
     updateAt?: string
     deleteAt?: string
@@ -17,10 +17,14 @@ export interface EstateDataDto {
  * @export
  */
 export default class ServerApi {
-    public static serverUrl = 'http://caperal.cn:3141'
+    // public static serverUrl = 'http://caperal.cn:3141'
+    public static serverUrl = 'http://localhost:3141'
 
     public static async rawGetRequest<T = AxiosResponse<EstateDataDto[] | any>>(api: string) {
+        
         const result = await axios.get<T>(`${this.serverUrl}/${api}`)
+        console.log(result);
+
         return result
     }
 }

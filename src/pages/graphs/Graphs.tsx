@@ -1,13 +1,23 @@
 import ReactEcharts from 'echarts-for-react'
-import moment from 'moment'
 import React, { useEffect, useState } from 'react'
-import ServerApi, { EstateDataDto, RecordDto } from '../../assets/js/service'
+import ServerApi, { EstateDataDto, RecordData } from '../../assets/js/service'
 
-const test: RecordDto[] = [{ '1579242785372': { secondHandedAmount: ' 59948 ' } }, { '1579246382840': { secondHandedAmount: ' 59952 ' } }]
+const test: RecordData[] = [
+    {
+        touming: { value: '全市 100917 套挂牌真房源，27875 名备案经纪人，其中金领顾问 2098 名', timestamp: '1579507893255' },
+        lianjia: { value: ' 59838 ', timestamp: '1579507893255' }
+    }
+]
+
+interface AxisData {
+    name: string
+    xValue: string[]
+    yValue: string[]
+}
 
 export const Graphs = () => {
-    const [records, setRecords] = useState<RecordDto[]>(test)
-    const [graphData, setGraphData] = useState()
+    const [records, setRecords] = useState<RecordData[]>(test)
+    const [graphData, setGraphData] = useState<any[]>([])
 
     useEffect(() => {
         const fetchData = () =>
@@ -21,36 +31,43 @@ export const Graphs = () => {
     }, [])
 
     /*
-     * WARN:
-     * THIS WEIRD DATA STRUCTURE IS PRACTICE ONLY
-     * IT IS PART OF TS TRAINING
+     * transform to axis data
      */
     useEffect(() => {
-        let xValue: string[] = [],
-            yValue: number[] = []
-        records.forEach(item => {
-            xValue.push(moment(parseInt(Object.keys(item)[0], 10)).format("HH' DD/MMM/YYYY"))
-            yValue.push(parseInt(Object.values(item)[0].secondHandedAmount, 10))
+        if (!records.length) {
+            return
+        }
+        let axisDataList: AxisData[] = Object.keys(records[0]).map(item => ({
+            name: item,
+            xValue: [],
+            yValue: []
+        }))
+
+        axisDataList.forEach(data => {
+            records.forEach(item => {
+                const { value, timestamp } = item[data.name]
+                data.xValue.push(timestamp)
+                data.yValue.push(value.match(/(\d)+/g)![0])
+            })
+            const newGraph = axisGenerator(data)
+            setGraphData(s => {
+                const updateState = [...s, newGraph]
+                return updateState
+            })
         })
-        setGraphData(axisGenerator(xValue, yValue))
     }, [records])
 
-    return <>{graphData && <ReactEcharts option={graphData} />}</>
+    return (
+        <>
+            {graphData.map(item => (
+                <ReactEcharts option={item} key={item.name} />
+            ))}
+        </>
+    )
 }
 
-const axisGenerator = (xValue: string[], yValue: number[]) => {
-    var base = +new Date(xValue[0])
-    var oneDay = 24 * 3600 * 1000
-    var date = []
-
-    var data = [Math.random() * 300]
-
-    for (var i = 1; i < 20000; i++) {
-        var now = new Date((base += oneDay))
-        date.push([now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'))
-        data.push(Math.round((Math.random() - 0.5) * 20 + data[i - 1]))
-    }
-
+const axisGenerator = (data: AxisData) => {
+    const { name, xValue, yValue } = data
     return {
         tooltip: {
             trigger: 'axis',
@@ -60,7 +77,7 @@ const axisGenerator = (xValue: string[], yValue: number[]) => {
         },
         title: {
             left: 'center',
-            text: 'HZ real-estate data graph'
+            text: `source for real-estate site: ${name}`
         },
         toolbox: {
             feature: {
