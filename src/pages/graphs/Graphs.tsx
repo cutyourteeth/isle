@@ -1,4 +1,5 @@
 import ReactEcharts from 'echarts-for-react'
+import moment from 'moment'
 import React, { useEffect, useState } from 'react'
 import ServerApi, { EstateDataDto, RecordData } from '../../assets/js/service'
 
@@ -12,7 +13,7 @@ const test: RecordData[] = [
 interface AxisData {
     name: string
     xValue: string[]
-    yValue: string[]
+    yValue: number[]
 }
 
 export const Graphs = () => {
@@ -46,9 +47,10 @@ export const Graphs = () => {
         axisDataList.forEach(data => {
             records.forEach(item => {
                 const { value, timestamp } = item[data.name]
-                data.xValue.push(timestamp)
-                data.yValue.push(value.match(/(\d)+/g)![0])
+                data.xValue.push(moment(parseInt(timestamp, 10)).format("HH' DD/MMM/YYYY"))
+                data.yValue.push(parseInt(value.match(/(\d)+/g)![0], 10))
             })
+            console.log(data);
             const newGraph = axisGenerator(data)
             setGraphData(s => {
                 const updateState = [...s, newGraph]
@@ -59,8 +61,8 @@ export const Graphs = () => {
 
     return (
         <>
-            {graphData.map(item => (
-                <ReactEcharts option={item} key={item.name} />
+            {graphData.map((item,index) => (
+                <ReactEcharts option={item} key={index} />
             ))}
         </>
     )
