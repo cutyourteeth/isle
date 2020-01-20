@@ -3,12 +3,6 @@ import moment from 'moment'
 import React, { useEffect, useState } from 'react'
 import ServerApi, { EstateDataDto, RecordData } from '../../assets/js/service'
 
-const test: RecordData[] = [
-    {
-        touming: { value: '全市 100917 套挂牌真房源，27875 名备案经纪人，其中金领顾问 2098 名', timestamp: '1579507893255' },
-        lianjia: { value: ' 59838 ', timestamp: '1579507893255' }
-    }
-]
 
 interface AxisData {
     name: string
@@ -17,7 +11,7 @@ interface AxisData {
 }
 
 export const Graphs = () => {
-    const [records, setRecords] = useState<RecordData[]>(test)
+    const [records, setRecords] = useState<RecordData[]>([])
     const [graphData, setGraphData] = useState<any[]>([])
 
     useEffect(() => {
