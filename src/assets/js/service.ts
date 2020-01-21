@@ -17,8 +17,8 @@ export interface EstateDataDto {
  * @export
  */
 export default class ServerApi {
-    // public static serverUrl = 'http://caperal.cn:3141'
-    public static serverUrl = 'http://localhost:3141'
+    public static serverUrl = 'http://caperal.cn:3141'
+    // public static serverUrl = 'http://localhost:3141'
 
     public static async rawGetRequest<T = AxiosResponse<EstateDataDto[] | any>>(api: string) {
         const result = await axios.get<T>(`${this.serverUrl}/${api}`)
