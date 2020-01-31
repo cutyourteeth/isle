@@ -5,11 +5,12 @@ import { axisGenerator, chartDataGenerator } from './axisDataGenerator';
 
 interface Props {
     api: string; // where data from
+    extractMethod?: (value: string) => number;
     children?: React.ReactNode;
 }
 
 export const Chart = (props: Props) => {
-    const { api, children } = props;
+    const { api, children, extractMethod } = props;
     const [records, setRecords] = useState<RecordData[]>([]);
     const [graphData, setGraphData] = useState<any[]>([]);
 
@@ -31,13 +32,12 @@ export const Chart = (props: Props) => {
         if (!records.length) {
             return;
         }
-        const data = chartDataGenerator(records);
-        console.log('last transfer data', data);
+        const data = chartDataGenerator(records, extractMethod);
         if (data) {
             const axis = data.map(d => axisGenerator(d));
             setGraphData(axis);
         }
-    }, [records]);
+    }, [records,extractMethod]);
 
     return (
         <>

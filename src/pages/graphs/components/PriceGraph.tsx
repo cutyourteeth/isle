@@ -2,5 +2,8 @@ import React from 'react';
 import { Chart } from './Chart';
 
 export const PriceGraph = () => {
-    return <Chart api="price/yopulinghu"></Chart>;
+    const extractValue = (value: string)=>{
+        return parseInt(value.match(/(\d+)/g)![0],10)
+    }
+    return <Chart api="list/price/youlinghu" extractMethod={extractValue}></Chart>;
 };

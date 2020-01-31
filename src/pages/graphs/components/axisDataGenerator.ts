@@ -7,18 +7,27 @@ interface AxisData {
     yValue: number[];
 }
 
-export const chartDataGenerator = (records: RecordData[]): AxisData[] => {
+export const chartDataGenerator = (records: RecordData[], extractValue?: (value: string) => number): AxisData[] => {
     let axisDataList: AxisData[] = Object.keys(records[0]).map(item => ({
         name: item,
         xValue: [],
         yValue: [],
     }));
 
+    // default: looking for first numbers in string,
+    // if method was in the props, use it
+    const extractValueDefault = (value: string) => {
+        return parseInt(value.match(/(\d)+/g)![0], 10);
+    };
+    
     axisDataList.forEach(data => {
         records.forEach(item => {
+            if (!Object.keys(item).length) {
+                return;
+            }
             const { value, timestamp } = item[data.name]; // get specific data from resource name
             data.xValue.push(moment(parseInt(timestamp, 10)).format("HH' DD/MMM/YYYY"));
-            data.yValue.push(parseInt(value.match(/(\d)+/g)![0], 10));
+            data.yValue.push(extractValue ? extractValue(value) : extractValueDefault(value));
         });
     });
     return axisDataList;
@@ -35,7 +44,7 @@ export const axisGenerator = (data: AxisData) => {
         },
         title: {
             left: 'center',
-            text: `source for real-estate site: ${name}`,
+            text: `source for ${name}`,
         },
         toolbox: {
             feature: {
