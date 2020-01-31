@@ -30,9 +30,9 @@ export const Home = () => {
         
         <div className="main-view">
           <Switch>
-            <Route path="/graphs" exact={true} component={Graphs} />
-            <Route path="/thoughts" exact={true} component={Thoughts} />
-            <Route path="/about" exact={true} component={About} />
+            <Route path="/graphs" component={Graphs} />
+            <Route path="/thoughts" component={Thoughts} />
+            <Route path="/about" component={About} />
           </Switch>
         </div>
       </HashRouter>

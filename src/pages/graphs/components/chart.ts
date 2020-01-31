@@ -6,8 +6,7 @@ interface AxisData {
     yValue: number[];
 }
 
-
-export const chartDataGenerator = (records: any[]):any => {
+export const chartDataGenerator = (records: any[]): any => {
     let axisDataList: AxisData[] = Object.keys(records[0]).map(item => ({
         name: item,
         xValue: [],
@@ -22,7 +21,9 @@ export const chartDataGenerator = (records: any[]):any => {
         });
         console.log(data);
         const graphData = axisGenerator(data);
-        return graphData
+        console.log(graphData);
+        
+        return graphData;
     });
 };
 const axisGenerator = (data: AxisData) => {

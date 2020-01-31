@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import ServerApi, { EstateDataDto, RecordData } from '../../../assets/js/service';
 import { chartDataGenerator } from './chart';
 
-
 export const EstateGraph = () => {
     const [records, setRecords] = useState<RecordData[]>([]);
     const [graphData, setGraphData] = useState<any[]>([]);
@@ -26,15 +25,19 @@ export const EstateGraph = () => {
         if (!records.length) {
             return;
         }
-        setGraphData(chartDataGenerator(records))
+        const data = chartDataGenerator(records);
+        console.log(data);
+        if (data) {
+            setGraphData(data);
+        }
     }, [records]);
 
     return (
         <>
+            here is the estate-graphs
             {graphData.map((item, index) => (
                 <ReactEcharts option={item} key={index} />
             ))}
         </>
     );
 };
-
