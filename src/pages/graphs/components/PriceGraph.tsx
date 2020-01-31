@@ -1,5 +1,6 @@
 import React from 'react';
+import { Chart } from './Chart';
 
 export const PriceGraph = () => {
-    return <div>here is the price-graphs</div>;
+    return <Chart api="price"></Chart>;
 };

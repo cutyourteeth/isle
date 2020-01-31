@@ -1,6 +1,6 @@
 import moment from 'moment';
 import { RecordData } from '../../../assets/js/service';
-// format needs finally
+// Array format needs finally
 interface AxisData {
     name: string;
     xValue: string[];
@@ -24,6 +24,7 @@ export const chartDataGenerator = (records: RecordData[]): AxisData[] => {
     );
     return axisDataList;
 };
+
 export const axisGenerator = (data: AxisData) => {
     const { name, xValue, yValue } = data;
     return {
