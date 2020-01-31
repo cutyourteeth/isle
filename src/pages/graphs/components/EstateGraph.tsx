@@ -1,7 +1,7 @@
 import ReactEcharts from 'echarts-for-react';
 import React, { useEffect, useState } from 'react';
 import ServerApi, { EstateDataDto, RecordData } from '../../../assets/js/service';
-import { chartDataGenerator } from './chart';
+import { axisGenerator, chartDataGenerator } from './chart';
 
 export const EstateGraph = () => {
     const [records, setRecords] = useState<RecordData[]>([]);
@@ -26,9 +26,10 @@ export const EstateGraph = () => {
             return;
         }
         const data = chartDataGenerator(records);
-        console.log(data);
+        console.log('last transfer data', data);
         if (data) {
-            setGraphData(data);
+            const axis = data.map(d =>axisGenerator(d))
+            setGraphData(axis);
         }
     }, [records]);
 

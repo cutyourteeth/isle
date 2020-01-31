@@ -1,4 +1,5 @@
 import moment from 'moment';
+import { RecordData } from '../../../assets/js/service';
 // format needs finally
 interface AxisData {
     name: string;
@@ -6,7 +7,7 @@ interface AxisData {
     yValue: number[];
 }
 
-export const chartDataGenerator = (records: any[]): any => {
+export const chartDataGenerator = (records: RecordData[]): AxisData[] => {
     let axisDataList: AxisData[] = Object.keys(records[0]).map(item => ({
         name: item,
         xValue: [],
@@ -15,18 +16,15 @@ export const chartDataGenerator = (records: any[]): any => {
 
     axisDataList.forEach(data => {
         records.forEach(item => {
-            const { value, timestamp } = item[data.name];
+            const { value, timestamp } = item[data.name]; // get specific data from resource name
             data.xValue.push(moment(parseInt(timestamp, 10)).format("HH' DD/MMM/YYYY"));
             data.yValue.push(parseInt(value.match(/(\d)+/g)![0], 10));
         });
-        console.log(data);
-        const graphData = axisGenerator(data);
-        console.log(graphData);
-        
-        return graphData;
-    });
+    }
+    );
+    return axisDataList;
 };
-const axisGenerator = (data: AxisData) => {
+export const axisGenerator = (data: AxisData) => {
     const { name, xValue, yValue } = data;
     return {
         tooltip: {

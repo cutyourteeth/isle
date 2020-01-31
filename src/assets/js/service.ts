@@ -22,7 +22,7 @@ export default class ServerApi {
     public static serverUrl = 'http://caperal.cn:3141';
     // public static serverUrl = 'http://localhost:3141'
 
-    public static async getListData<T = AxiosResponse<BaseDataDto[] | any>>(api: string, name?: string) {
+    public static async getListData<T = AxiosResponse<BaseDataDto[]>>(api: string, name?: string) {
         let destination = name ? `${api}/${name}` : `${api}`;
         const result = await axios.get<T>(`${this.serverUrl}/${destination}`);
         return result;
