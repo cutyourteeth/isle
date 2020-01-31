@@ -2,5 +2,5 @@ import React from 'react';
 import { Chart } from './Chart';
 
 export const EstateGraph = () => {
-    return <Chart api="list/hz"></Chart>;
+    return <Chart api="list/estate"></Chart>;
 };

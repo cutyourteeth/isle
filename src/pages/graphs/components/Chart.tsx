@@ -1,7 +1,7 @@
 import ReactEcharts from 'echarts-for-react';
 import React, { useEffect, useState } from 'react';
 import ServerApi, { EstateDataDto, RecordData } from '../../../assets/js/service';
-import { axisGenerator, chartDataGenerator } from './generator';
+import { axisGenerator, chartDataGenerator } from './axisDataGenerator';
 
 interface Props {
     api: string; // where data from

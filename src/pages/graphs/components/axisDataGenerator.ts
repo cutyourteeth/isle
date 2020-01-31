@@ -20,8 +20,7 @@ export const chartDataGenerator = (records: RecordData[]): AxisData[] => {
             data.xValue.push(moment(parseInt(timestamp, 10)).format("HH' DD/MMM/YYYY"));
             data.yValue.push(parseInt(value.match(/(\d)+/g)![0], 10));
         });
-    }
-    );
+    });
     return axisDataList;
 };
 
