@@ -1,14 +1,19 @@
-import * as H from 'history';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 
-export const StyledLink = (props: H.LocationState) => {
+interface Props {
+    children: React.ReactNode;
+    to: string;
+    
+}
+
+export const StyledLink = (props: Props) => {
     const [active, setActive] = useState(false);
     const history = useHistory();
     const changeState = () => {
         if (active) {
-            // change to root url
+            //TODO: change to sallower level url
             history.push('/');
         } else {
             history.push(props.to);

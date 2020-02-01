@@ -24,6 +24,7 @@ export const HomeWrapper = styled.div`
     }
   }
   .main-view {
+    padding: 0 2rem;
     min-height: calc(100vh - 400px);
   }
   .header {

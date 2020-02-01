@@ -5,12 +5,10 @@ import { Graphs } from "../graphs/Graphs";
 import { Thoughts } from "../thoughts/Thoughts";
 import { HamButton } from "./components/HamButton";
 import { Links } from "./components/Links";
-// import "./style.scss";
 import { HomeWrapper } from "./style";
 
 export const Home = () => {
   return (
-    // <div className="wrapper">
     <HomeWrapper>
       <HashRouter>
         <div className="header">
@@ -37,6 +35,5 @@ export const Home = () => {
         </div>
       </HashRouter>
     </HomeWrapper>
-    // </div>
   );
 };

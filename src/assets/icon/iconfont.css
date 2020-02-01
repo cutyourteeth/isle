@@ -1,0 +1,52 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1580553513167'); /* IE9 */
+  src: url('iconfont.eot?t=1580553513167#iefix') format('embedded-opentype'), 
+  url('iconfont.woff?t=1580553513167') format('woff'),
+  url('iconfont.ttf?t=1580553513167') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1580553513167#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chat:before {
+  content: "\e7cf";
+}
+
+.icon-github:before {
+  content: "\e842";
+}
+
+.icon-skill:before {
+  content: "\e653";
+}
+
+.icon-code:before {
+  content: "\e601";
+}
+
+.icon-hat:before {
+  content: "\e656";
+}
+
+.icon-arrow-down:before {
+  content: "\e602";
+}
+
+.icon-Globe:before {
+  content: "\e714";
+}
+
+.icon-mail:before {
+  content: "\e769";
+}
+
+.icon-home:before {
+  content: "\e611";
+}
+

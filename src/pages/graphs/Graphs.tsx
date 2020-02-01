@@ -9,8 +9,11 @@ export const Graphs = () => {
     return (
         <div>
             <LinksWrapper>
-                <StyledLink to="/graphs/estate">Real-Estate</StyledLink>
+                <StyledLink to="/graphs/estate">Real Estate</StyledLink>
+                {/* TODO */}
+                {/* <StyledLink to="/graphs/price">Marketing</StyledLink> */}
                 <StyledLink to="/graphs/price">Price</StyledLink>
+                <StyledLink to="/graphs/marketing">Marketing</StyledLink>
             </LinksWrapper>
             <Switch>
                 <Route path="/graphs/estate">
