@@ -7,7 +7,12 @@ export const StyledLink = (props: H.LocationState) => {
     const [active, setActive] = useState(false);
     const history = useHistory();
     const changeState = () => {
-        history.push(props.to);
+        if (active) {
+            // change to root url
+            history.push('/');
+        } else {
+            history.push(props.to);
+        }
         setActive(s => !s);
     };
 
