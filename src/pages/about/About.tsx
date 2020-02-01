@@ -4,17 +4,18 @@ import styled from 'styled-components';
 export const About = () => {
     return (
         <AboutWrapper>
-            <div className="content">Not available now.</div>
+            <div className="content">--Details not available now--</div>
             <div className="contact-list">
-                You may contact with me with
-                <a href="tencent://message/?uin=273964183" className="contact-chat icon-chat">
-                    273964183
+                <div className="contact-title">You may contact me with</div>
+                <br />
+                <a href="tencent://message/?uin=273964183" className="contact-chat">
+                    <span className="iconfont icon-chat"></span> 273964183
                 </a>
-                <a href="https://github.com/dimlights" className="contact-github icon-github">
-                    https://github.com/dimlights
+                <a href="https://github.com/dimlights" className="contact-github ">
+                    <span className="iconfont icon-github"></span> https://github.com/dimlights
                 </a>
-                <a href="mail:qq17402@sina.com" className="contact-mail icon-mail">
-                    qq17402@sina.com
+                <a href="mail:qq17402@sina.com" className="contact-mail ">
+                    <span className="iconfont icon-mail"></span> qq17402@sina.com
                 </a>
             </div>
         </AboutWrapper>
@@ -32,9 +33,12 @@ export const AboutWrapper = styled.div`
         padding: 2rem 0;
         display: flex;
         flex-flow: column;
-
         &:hover {
             color: rgb(178, 178, 178, 0.6);
+        }
+        a > span {
+            font-weight: 700;
+            padding: 0 0.25em 0 0;
         }
         a:hover {
             color: white;

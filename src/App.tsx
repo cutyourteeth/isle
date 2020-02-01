@@ -1,6 +1,5 @@
 import React from "react";
 import "./assets/css/animations.css";
-import "./assets/css/reset.css";
 import { Home } from "./pages/home/Home";
 import { SiteRecord } from "./pages/site-record/SiteRecord";
 
