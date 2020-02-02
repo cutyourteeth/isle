@@ -19,7 +19,7 @@ export interface PriceDataDto extends BaseDataDto {}
  * @export
  */
 export default class ServerApi {
-    public static serverUrl = 'http://caperal.cn:3141';
+    public static serverUrl = 'https://caperal.cn:3141';
     // public static serverUrl = 'http://localhost:3141'
 
     public static async getListData<T = AxiosResponse<BaseDataDto[]>>(api: string, name?: string) {
