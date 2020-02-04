@@ -1,3 +1,4 @@
+// manually load ECharts file shrink bundle size
 import ReactEchartsCore from 'echarts-for-react/lib/core';
 import 'echarts/lib/chart/line';
 import 'echarts/lib/component/dataZoom';
@@ -8,14 +9,20 @@ import 'echarts/lib/component/tooltip';
 import echarts from 'echarts/lib/echarts';
 import React from 'react';
 
+interface Props {
+    data: AxisData;
+}
+
+const EChartGenerator = (props: Props) => {
+    return <ReactEchartsCore echarts={echarts} option={chartDataGenerator(props.data)} />;
+};
+
+export default EChartGenerator;
+
 export interface AxisData {
     name: string;
     xValue: string[];
     yValue: number[];
-}
-
-interface Props {
-    data: AxisData;
 }
 
 const chartDataGenerator = (data: AxisData) => {
@@ -98,9 +105,3 @@ const chartDataGenerator = (data: AxisData) => {
         ],
     };
 };
-
-const EChart = (props: Props) => {
-    return <ReactEchartsCore echarts={echarts} option={chartDataGenerator(props.data)} />;
-};
-
-export default EChart

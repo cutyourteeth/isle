@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chart } from './Chart';
+import { Chart } from './components/Chart';
 
 export const PriceGraph = () => {
     const extractValue = (value: string)=>{

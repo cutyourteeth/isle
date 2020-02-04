@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Switch } from 'react-router';
 import styled from 'styled-components';
 import StyledLink from '../../components/core/StyledLink';
-import { EstateGraph } from './components/EstateGraph';
-import { PriceGraph } from './components/PriceGraph';
+import { EstateGraph } from './EstateGraph';
+import { PriceGraph } from './PriceGraph';
 
 export const Graphs = () => {
     return (

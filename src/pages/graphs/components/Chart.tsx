@@ -3,41 +3,8 @@ import React, { useEffect, useState } from 'react';
 import ServerApi, { EstateDataDto, RecordData } from '../../../assets/js/service';
 
 const EChart = React.lazy(() => {
-    return import(/* webpackChunkName: 'StockChart' */ './EChart');
+    return import(/* webpackChunkName: 'StockChart' */ './EChartGenerator');
 });
-
-// Array format needs finally
-interface AxisData {
-    name: string;
-    xValue: string[];
-    yValue: number[];
-}
-
-const chartDataGenerator = (records: RecordData[], extractValue?: (value: string) => number): AxisData[] => {
-    let axisDataList: AxisData[] = Object.keys(records[0]).map(item => ({
-        name: item,
-        xValue: [],
-        yValue: [],
-    }));
-
-    // default: looking for first numbers in string,
-    // if method was in the props, use it
-    const extractValueDefault = (value: string) => {
-        return parseInt(value.match(/(\d)+/g)![0], 10);
-    };
-
-    axisDataList.forEach(data => {
-        records.forEach(item => {
-            if (!Object.keys(item).length) {
-                return;
-            }
-            const { value, timestamp } = item[data.name]; // get specific data from resource name
-            data.xValue.push(format(parseInt(timestamp, 10), 'HH@dd/MM/yyyy'));
-            data.yValue.push(extractValue ? extractValue(value) : extractValueDefault(value));
-        });
-    });
-    return axisDataList;
-};
 
 interface Props {
     api: string; // where data from
@@ -82,4 +49,37 @@ export const Chart = (props: Props) => {
             ))}
         </React.Suspense>
     );
+};
+
+// Array format needs finally
+interface AxisData {
+    name: string;
+    xValue: string[];
+    yValue: number[];
+}
+
+const chartDataGenerator = (records: RecordData[], extractValue?: (value: string) => number): AxisData[] => {
+    let axisDataList: AxisData[] = Object.keys(records[0]).map(item => ({
+        name: item,
+        xValue: [],
+        yValue: [],
+    }));
+
+    // default: looking for first numbers in string,
+    // if method was in the props, use it
+    const extractValueDefault = (value: string) => {
+        return parseInt(value.match(/(\d)+/g)![0], 10);
+    };
+
+    axisDataList.forEach(data => {
+        records.forEach(item => {
+            if (!Object.keys(item).length) {
+                return;
+            }
+            const { value, timestamp } = item[data.name]; // get specific data from resource name
+            data.xValue.push(format(parseInt(timestamp, 10), 'HH@dd/MM/yyyy'));
+            data.yValue.push(extractValue ? extractValue(value) : extractValueDefault(value));
+        });
+    });
+    return axisDataList;
 };
