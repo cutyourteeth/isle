@@ -1,7 +1,8 @@
-import ReactEcharts from 'echarts-for-react';
 import React, { useEffect, useState } from 'react';
 import ServerApi, { EstateDataDto, RecordData } from '../../../assets/js/service';
 import { axisGenerator, chartDataGenerator } from './axisDataGenerator';
+
+const ReactEcharts = React.lazy(() => import(/* webpackChunkName: 'StockChart' */ 'echarts-for-react'));
 
 interface Props {
     api: string; // where data from
@@ -37,14 +38,14 @@ export const Chart = (props: Props) => {
             const axis = data.map(d => axisGenerator(d));
             setGraphData(axis);
         }
-    }, [records,extractMethod]);
+    }, [records, extractMethod]);
 
     return (
-        <>
+        <React.Suspense fallback={<div>Loading...</div>}>
             {children}
             {graphData.map((item, index) => (
                 <ReactEcharts option={item} key={index} />
             ))}
-        </>
+        </React.Suspense>
     );
 };

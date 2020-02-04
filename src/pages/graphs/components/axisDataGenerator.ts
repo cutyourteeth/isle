@@ -1,4 +1,5 @@
-import moment from 'moment';
+
+import { format } from 'date-fns';
 import { RecordData } from '../../../assets/js/service';
 // Array format needs finally
 interface AxisData {
@@ -26,7 +27,7 @@ export const chartDataGenerator = (records: RecordData[], extractValue?: (value:
                 return;
             }
             const { value, timestamp } = item[data.name]; // get specific data from resource name
-            data.xValue.push(moment(parseInt(timestamp, 10)).format("HH' DD/MMM/YYYY"));
+            data.xValue.push(format(parseInt(timestamp, 10), 'HH@dd/MM/yyyy'));
             data.yValue.push(extractValue ? extractValue(value) : extractValueDefault(value));
         });
     });
