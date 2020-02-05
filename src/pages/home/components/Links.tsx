@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import StyledLink from '../../../components/core/StyledLink';
+import { Divide } from './Divide';
 
 const technicLinks = [
     { urlParam: 'graphs', name: 'Graphs' },
@@ -35,7 +36,7 @@ export const Links = () => {
                         </StyledLink>
                     ),
             )}
-            <hr />
+            <Divide />
             {personalLinks.map(
                 item =>
                     findReg(item.urlParam) && (

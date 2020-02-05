@@ -37,7 +37,7 @@ const LinkWrapper = styled.div`
     ${props => (props.theme.active ? `color: #2dc6ad;filter: hue-rotate();animation: hue-trans 300s infinite;` : ``)}
 
     &:hover {
-        color: #2dc6ad;
+        color: white;
         filter: hue-rotate();
         animation: hue-trans 7s infinite;
     }
