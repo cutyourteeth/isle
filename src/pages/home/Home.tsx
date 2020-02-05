@@ -21,7 +21,7 @@ export const Home = () => {
         <div className="title">
           <h1>Be a man,</h1>
           <h1>Half blind</h1>
-          <p>Mind your own, leave out all the rest</p>
+          <p>Here is Caper's playground for developing & technics</p>
         </div>
 
         <Links/>

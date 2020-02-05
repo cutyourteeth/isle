@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 export const SiteRecord = () => {
     return (
@@ -8,12 +8,12 @@ export const SiteRecord = () => {
                 <span role="img" aria-label="emoji">
                     ✨
                 </span>
-                This site is under developing, see you soon&nbsp;
+                Built with React & supported by Node on Nginx. &nbsp;
                 <span role="img" aria-label="emoji">
                     ✨
                 </span>
             </p>
-            <br/>
+            <br />
             <p>
                 Written by Caper with passion and&nbsp;
                 <span role="img" aria-label="emoji">
@@ -24,8 +24,8 @@ export const SiteRecord = () => {
                 IPC证: 浙ICP备19047176号
             </Anchor>
         </SiteInfo>
-    )
-}
+    );
+};
 
 const SiteInfo = styled.div`
     display: flex;
@@ -38,7 +38,7 @@ const SiteInfo = styled.div`
     & > p:hover {
         color: goldenrod;
     }
-`
+`;
 
 const Anchor = styled.a`
     padding: 1rem 2rem;
@@ -47,4 +47,4 @@ const Anchor = styled.a`
     &:hover {
         color: goldenrod;
     }
-`
+`;

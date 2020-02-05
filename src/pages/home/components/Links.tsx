@@ -3,8 +3,11 @@ import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import StyledLink from '../../../components/core/StyledLink';
 
-const firstLevelRoutes = [
+const technicLinks = [
     { urlParam: 'graphs', name: 'Graphs' },
+    { urlParam: 'self-built', name: 'Self-Built' },
+];
+const personalLinks = [
     { urlParam: 'thoughts', name: 'Thoughts' },
     { urlParam: 'about', name: 'About' },
 ];
@@ -24,7 +27,16 @@ export const Links = () => {
 
     return (
         <LinksWrapper>
-            {firstLevelRoutes.map(
+            {technicLinks.map(
+                item =>
+                    findReg(item.urlParam) && (
+                        <StyledLink key={item.name} to={`/${item.urlParam}`}>
+                            {item.name}
+                        </StyledLink>
+                    ),
+            )}
+            <hr />
+            {personalLinks.map(
                 item =>
                     findReg(item.urlParam) && (
                         <StyledLink key={item.name} to={`/${item.urlParam}`}>

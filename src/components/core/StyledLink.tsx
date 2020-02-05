@@ -5,7 +5,6 @@ import styled from 'styled-components';
 interface Props {
     children: React.ReactNode;
     to: string;
-    
 }
 
 export const StyledLink = (props: Props) => {
@@ -35,7 +34,7 @@ const LinkWrapper = styled.div`
     font-weight: bold;
     text-decoration: none;
     color: grey;
-    ${props => (props.theme.active ? `color: #2dc6ad;filter: hue-rotate();animation: hue-trans 7s infinite;` : ``)}
+    ${props => (props.theme.active ? `color: #2dc6ad;filter: hue-rotate();animation: hue-trans 300s infinite;` : ``)}
 
     &:hover {
         color: #2dc6ad;
