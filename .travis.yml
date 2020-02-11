@@ -5,4 +5,5 @@ before_script:
   - npm install yarn
 
 script: 
+  - yarn install
   - yarn build
