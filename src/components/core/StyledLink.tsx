@@ -5,12 +5,13 @@ import styled from 'styled-components';
 interface Props {
     children: React.ReactNode;
     to: string;
+    static?: boolean; // if static means a total new url is pushed in
 }
 
 export const StyledLink = (props: Props) => {
     const [active, setActive] = useState(false);
     const history = useHistory();
-    const changeState = () => {
+    const changeRoute = () => {
         if (active) {
             //TODO: change to sallower level url
             history.push('/');
@@ -20,8 +21,12 @@ export const StyledLink = (props: Props) => {
         setActive(s => !s);
     };
 
+    const replaceRoute = () => {
+        window.location.replace(props.to);
+    };
+
     return (
-        <LinkWrapper onClick={changeState} theme={{ active }}>
+        <LinkWrapper onClick={props.static ? replaceRoute : changeRoute} theme={{ active }}>
             {props.children}
         </LinkWrapper>
     );

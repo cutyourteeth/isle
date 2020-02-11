@@ -4,11 +4,16 @@ import styled from 'styled-components';
 import StyledLink from '../../../components/core/StyledLink';
 import { Divide } from './Divide';
 
-const technicLinks = [
+interface LinkInfo {
+    name: string;
+    urlParam?: string;
+    staticUrl?: string;
+}
+const technicLinks: LinkInfo[] = [
     { urlParam: 'graphs', name: 'Graphs' },
-    { urlParam: 'self-built', name: 'Self-Built' },
+    { staticUrl: 'http://gears.caperal.cn', name: 'React-Gears' },
 ];
-const personalLinks = [
+const personalLinks: LinkInfo[] = [
     { urlParam: 'thoughts', name: 'Thoughts' },
     { urlParam: 'about', name: 'About' },
 ];
@@ -26,25 +31,24 @@ export const Links = () => {
         return location.pathname.match(reg);
     };
 
+    const linkGenerator = (item: LinkInfo) =>
+        item['staticUrl'] ? (
+            <StyledLink key={item.name} static={true} to={item.staticUrl}>
+                {item.name}
+            </StyledLink>
+        ) : item['urlParam'] ? (
+            findReg(item.urlParam) && (
+                <StyledLink key={item.name} to={`/${item.urlParam}`}>
+                    {item.name}
+                </StyledLink>
+            )
+        ) : null;
+
     return (
         <LinksWrapper>
-            {technicLinks.map(
-                item =>
-                    findReg(item.urlParam) && (
-                        <StyledLink key={item.name} to={`/${item.urlParam}`}>
-                            {item.name}
-                        </StyledLink>
-                    ),
-            )}
+            {technicLinks.map(item => linkGenerator(item))}
             <Divide />
-            {personalLinks.map(
-                item =>
-                    findReg(item.urlParam) && (
-                        <StyledLink key={item.name} to={`/${item.urlParam}`}>
-                            {item.name}
-                        </StyledLink>
-                    ),
-            )}
+            {personalLinks.map(item => linkGenerator(item))}
         </LinksWrapper>
     );
 };
