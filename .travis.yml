@@ -7,3 +7,7 @@ before_script:
 script: 
   - yarn install
   - yarn build
+
+branches:
+  only:
+    - master
