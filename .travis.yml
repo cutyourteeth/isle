@@ -14,6 +14,9 @@ branches:
     only:
         - master
 
+# after_success:
+#     - mkdir dist
+#     - cp -r build/ dist/
 #把 build 文件推送到 github production 分支下
 deploy:
     provider: pages
