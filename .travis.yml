@@ -1,29 +1,27 @@
 language: node_js
 node_js:
-  - 12.12.0
+    - 12.12.0
+before_script:
+    - npm install yarn
+
+script:
+    - yarn install
+    - yarn build
 
 cache: yarn
 
-#指定构建分支
 branches:
-  only:
-    - master
-#安装依赖
-install:
-  - yarn install
-script:
-  - yarn build
-#构建成功后，把部署所需的文件都拷贝到 build 文件夹下
-after_success:
-  - cp package.json build
-#把 dist 文件推送到 github DEPLOY-PROD 分支下
+    only:
+        - master
+
+#把 build 文件推送到 github page 分支下
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $DEPLOY_REPO
-  keep_history: true
-  target_branch: page
-  committer_from_gh: true
-  on:
-    branch: master
-    local_dir: build
+    provider: pages
+    skip_cleanup: true
+    github_token: $DEPLOY_REPO
+    keep_history: true
+    target_branch: page
+    committer_from_gh: true
+    on:
+        branch: master
+        local_dir: build
