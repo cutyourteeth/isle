@@ -49,6 +49,7 @@ export const Links = () => {
             {technicLinks.map(item => linkGenerator(item))}
             <Divide />
             {personalLinks.map(item => linkGenerator(item))}
+            <Divide />
         </LinksWrapper>
     );
 };
