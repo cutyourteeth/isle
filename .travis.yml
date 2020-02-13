@@ -14,13 +14,13 @@ branches:
     only:
         - master
 
-#把 build 文件推送到 github page 分支下
+#把 build 文件推送到 github production 分支下
 deploy:
     provider: pages
     skip_cleanup: true
     github_token: $DEPLOY_REPO
     keep_history: true
-    target_branch: page
+    target_branch: production
     committer_from_gh: true
     on:
         branch: master
