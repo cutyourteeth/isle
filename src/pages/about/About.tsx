@@ -10,8 +10,8 @@ export const About = () => {
                 <div className="contact-title">You may contact me with</div>
                 <br />
 
-                <a href="https://github.com/dimlights" className="contact-github ">
-                    <span className="iconfont icon-github"></span> https://github.com/dimlights
+                <a href="https://github.com/caperso" className="contact-github ">
+                    <span className="iconfont icon-github"></span> https://github.com/caperso
                 </a>
                 <a href="mail:qq17402@sina.com" className="contact-mail ">
                     <span className="iconfont icon-mail"></span> qq174028@sina.com

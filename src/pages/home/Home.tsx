@@ -19,11 +19,18 @@ export const Home = () => {
                 </div>
 
                 <div className="title">
-                    <h1 className="spot-light" data-spotlight='Caperal'>Caperal</h1>
-                    <br/>
-                    <h2>Caper's cloudtown for  </h2>
+                    <h1 className="spot-light" data-spotlight="Caperal">
+                        Caperal
+                    </h1>
+                    <br />
+                    <h2>Caper's cloudtown for </h2>
                     <h2>Data Charts, React Library, Docs, Notes </h2>
-                    <p>Here is Caper's playground for developing & technics</p>
+                    <p>
+                        For now, I'm developing &emsp;
+                        <span role="img" aria-label="gear">
+                            ⚙️ Gearware ⚙️
+                        </span>
+                    </p>
                 </div>
 
                 <Links />
