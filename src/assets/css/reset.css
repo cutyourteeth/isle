@@ -137,11 +137,9 @@ body {
   user-select: none;
   min-height: 100vh;
   background-color: #171717;
+  font-weight: 600;
 }
 
-h1,h2,h3,h4,h5,h6,p,a,span{
-  font-family: Helvetica, sans-serif, 'GT America', sans-serif;
-}
 
 a,
 a:hover,
@@ -152,4 +150,10 @@ a:visited {
 
 * {
   transition: 0.15s linear;
+  font-family: PingFangSC-light, Helvetica
+}
+
+
+h1,h2,h3,h4,h5,h6,p,a,span{
+  font-family: Helvetica, sans-serif, 'GT America', sans-serif;
 }
