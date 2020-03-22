@@ -33,3 +33,12 @@
         clip-path: ellipse(50px 50px at 120% 50%);
     }
 }
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.8;
+    }
+}

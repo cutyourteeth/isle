@@ -26,10 +26,11 @@ export const SiteRecord = () => {
 };
 
 const SiteInfo = styled.div`
+
     font-weight: 400;
     display: flex;
     flex-flow: column;
-    padding-left: 2rem;
+    padding: 2rem;
     font-size: 10px;
     color: white;
     & > p:hover {

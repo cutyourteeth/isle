@@ -23,9 +23,9 @@ export const Thoughts = () => {
     return (
         <WorkWrapper>
             {postInfos.map((item, index) => (
-                <div className="work-list-item" key={index}>
-                    <img src={item.imageUrl} className="work-list-image" alt="" />
-                    <div className="work-list-text">{item.text}</div>
+                <div className="thought-list-item" key={index}>
+                    <img src={item.imageUrl} className="thought-list-image" alt="" />
+                    <div className="thought-list-text">{item.text}</div>
                 </div>
             ))}
         </WorkWrapper>
@@ -33,13 +33,13 @@ export const Thoughts = () => {
 };
 
 export const WorkWrapper = styled.div`
-    .work-list-item {
+    .thought-list-item {
         position: relative;
         overflow: hidden;
     }
 
-    .work-list-image,
-    .work-list-text {
+    .thought-list-image,
+    .thought-list-text {
         padding: 4rem 0 0 2rem;
         box-sizing: border-box;
         width: 32rem;
@@ -49,7 +49,7 @@ export const WorkWrapper = styled.div`
         }
     }
 
-    .work-list-text {
+    .thought-list-text {
         top: 0;
         margin: 4rem 0 0 2rem;
         opacity: 0;
@@ -58,9 +58,9 @@ export const WorkWrapper = styled.div`
         white-space: pre-wrap;
     }
 
-    .work-list-text:hover,
-    .work-list-image:hover ~ .work-list-text {
+    .thought-list-text:hover,
+    .thought-list-image:hover ~ .thought-list-text {
         opacity: 1;
-        background-color: rgba(17, 17, 17, 0.6);
+        background-color: #17171760;
     }
 `;

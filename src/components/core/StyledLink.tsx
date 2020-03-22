@@ -3,8 +3,9 @@ import { useHistory } from 'react-router';
 import styled from 'styled-components';
 
 interface Props {
-    children: React.ReactNode;
     to: string;
+    children: React.ReactNode;
+    description?:string;
     static?: boolean; // if static means a total new url is pushed in
 }
 
@@ -26,7 +27,7 @@ export const StyledLink = (props: Props) => {
     };
 
     return (
-        <LinkWrapper onClick={props.static ? replaceRoute : changeRoute} theme={{ active }}>
+        <LinkWrapper onClick={props.static ? replaceRoute : changeRoute} theme={{ active }} data-hover={props.description}>
             {props.children}
         </LinkWrapper>
     );
@@ -38,13 +39,22 @@ const LinkWrapper = styled.div`
     cursor: pointer;
     font-weight: bold;
     text-decoration: none;
-    color: grey;
+    color: white;
     ${props => (props.theme.active ? `color: #2dc6ad;filter: hue-rotate();animation: hue-trans 300s infinite;` : ``)}
 
     &:hover {
-        color: white;
-        filter: hue-rotate();
+        color: #86fde8;
         animation: hue-trans 7s infinite;
+    }
+
+    &:hover::after {
+        content: attr(data-hover);
+        color: #ccc;
+        font-weight: 300;
+        font-size: 26px;
+        opacity: 0;
+        padding-left:0.5em;
+        animation: fade-in 0.45s forwards;
     }
 `;
 

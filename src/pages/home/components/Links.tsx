@@ -9,11 +9,11 @@ interface LinkInfo {
     staticUrl?: string;
     description?: string;
 }
-const technicLinks: LinkInfo[] = [{ staticUrl: 'http://gears.caperal.cn', name: 'Gearware', description: ' A React UI library' }];
+const technicLinks: LinkInfo[] = [{ staticUrl: 'http://gears.caperal.cn', name: 'Gearware', description: 'React UI library' }];
 const personalLinks: LinkInfo[] = [
-    { urlParam: 'graphs', name: 'Charts', description: 'charts for data collector' },
-    { urlParam: 'thoughts', name: 'Thoughts', description: 'what is going on with me' },
-    { urlParam: 'about', name: 'About', description: 'contact and more' },
+    { urlParam: 'graphs', name: 'Charts', description: 'From my data collector' },
+    { urlParam: 'thoughts', name: 'Thoughts', description: 'Hi secret garden' },
+    { urlParam: 'about', name: 'About', description: 'Contact and more' },
 ];
 
 export const Links = () => {
@@ -32,8 +32,8 @@ export const Links = () => {
     const linkGenerator = (item: LinkInfo) => (
         <StyledLink
             key={item.name}
-            data-hover={item.description && item.description}
             static={!!item['staticUrl']}
+            description={item.description ? item.description : ''}
             to={item['staticUrl'] ? item.staticUrl : `/${item.urlParam}`}
         >
             {item.name}
@@ -55,11 +55,4 @@ const LinksWrapper = styled.div`
     flex-direction: column;
     padding: 0 2rem;
     position: relative;
-    &:hover {
-        color: transparent;
-    }
-    &::after:hover {
-        content: attr(data-hover);
-        position: absolute;
-    }
 `;
