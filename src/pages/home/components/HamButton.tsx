@@ -9,9 +9,6 @@ export const HamButton = () => {
     <HamWrapper>
       <i className="header-ham-button" onClick={showMenu} aria-label="menu"></i>
       <div className="header-links">
-        <Link to="/work" className="header-link">
-          WORK
-        </Link>
         <Link to="/thoughts" className="header-link">
           THOUGHTS
         </Link>

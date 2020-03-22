@@ -36,7 +36,7 @@ const chartDataGenerator = (data: AxisData) => {
         },
         title: {
             left: 'center',
-            text: `source for ${name}`,
+            text: `source from ${name}`,
         },
         toolbox: {
             feature: {

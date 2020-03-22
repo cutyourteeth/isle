@@ -18,7 +18,9 @@ export const SiteRecord = () => {
             </p>
             <br />
             <Anchor href="http://www.beian.miit.gov.cn/" aria-label="link and check for this site">
-                IPC证: 浙ICP备19047176号
+                <span role="img" aria-label="emoji">
+                    📦 IPC证: 浙ICP备19047176号 📦
+                </span>
             </Anchor>
             <br />
         </SiteInfo>
@@ -26,11 +28,11 @@ export const SiteRecord = () => {
 };
 
 const SiteInfo = styled.div`
-
     font-weight: 400;
     display: flex;
     flex-flow: column;
     padding: 2rem;
+    padding-top: 6rem;
     font-size: 10px;
     color: white;
     & > p:hover {
@@ -40,7 +42,6 @@ const SiteInfo = styled.div`
 
 const Anchor = styled.a`
     color: white;
-    font-size: 10px;
     &:hover {
         color: goldenrod;
     }
