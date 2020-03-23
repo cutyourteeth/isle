@@ -39,12 +39,11 @@ const LinkWrapper = styled.div`
     cursor: pointer;
     font-weight: bold;
     text-decoration: none;
-    color: white;
-    ${props => (props.theme.active ? `color: #2dc6ad;filter: hue-rotate();animation: hue-trans 300s infinite;` : ``)}
+    color:#444;
+    ${props => (props.theme.active ? `color: white;` : ``)}
 
     &:hover {
-        color: #86fde8;
-        animation: hue-trans 7s infinite;
+        color: white;
     }
 
     &:hover::after {
