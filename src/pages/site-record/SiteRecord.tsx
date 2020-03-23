@@ -33,7 +33,7 @@ const SiteInfo = styled.div`
     flex-flow: column;
     padding: 2rem;
     padding-top: 6rem;
-    font-size: 10px;
+    font-size: 12px;
     color: white;
     & > p:hover {
         color: goldenrod;

@@ -37,7 +37,6 @@ export const HomeWrapper = styled.div`
         & > h2 {
             font-weight: 600;
             line-height: 1.25;
-            letter-spacing: 0.1rem;
             font-size: 30px;
         }
 
