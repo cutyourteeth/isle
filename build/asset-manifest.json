@@ -2,7 +2,7 @@
   "files": {
     "StockChart.js": "/static/js/StockChart.320919a0.chunk.js",
     "StockChart.js.map": "/static/js/StockChart.320919a0.chunk.js.map",
-    "main.css": "/static/css/main.3c3fd11e.chunk.css",
+    "main.css": "/static/css/main.3bf67d53.chunk.css",
     "main.js": "/static/js/main.06089a2c.chunk.js",
     "main.js.map": "/static/js/main.06089a2c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.f20c26c7.js",
@@ -12,15 +12,15 @@
     "static/js/4.564eb4ba.chunk.js": "/static/js/4.564eb4ba.chunk.js",
     "static/js/4.564eb4ba.chunk.js.map": "/static/js/4.564eb4ba.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.01aaae529a2a7372d1c18e86596fe28f.js": "/precache-manifest.01aaae529a2a7372d1c18e86596fe28f.js",
+    "precache-manifest.1646749ecef0309297ceb37527f07fd7.js": "/precache-manifest.1646749ecef0309297ceb37527f07fd7.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.3c3fd11e.chunk.css.map": "/static/css/main.3c3fd11e.chunk.css.map",
+    "static/css/main.3bf67d53.chunk.css.map": "/static/css/main.3bf67d53.chunk.css.map",
     "static/media/reset.css": "/static/media/iconfont.9b3bebf1.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.f20c26c7.js",
     "static/js/4.564eb4ba.chunk.js",
-    "static/css/main.3c3fd11e.chunk.css",
+    "static/css/main.3bf67d53.chunk.css",
     "static/js/main.06089a2c.chunk.js"
   ]
 }
