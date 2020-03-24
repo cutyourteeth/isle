@@ -9,7 +9,10 @@ interface LinkInfo {
     staticUrl?: string;
     description?: string;
 }
-const technicLinks: LinkInfo[] = [{ staticUrl: 'http://gears.caperal.cn', name: 'Gearware', description: 'React UI library' }];
+const technicLinks: LinkInfo[] = [
+    { staticUrl: 'https://gears.caperal.cn', name: 'Gearware', description: 'React UI library' },
+    { staticUrl: 'https://gears.caperal.cn/zh-CN/', name: 'Gearware (zh-CN)', description: 'React 组件库' },
+];
 const personalLinks: LinkInfo[] = [
     { urlParam: 'graphs', name: 'Charts', description: 'From my data collector' },
     { urlParam: 'thoughts', name: 'Thoughts', description: 'Hi secret garden' },
