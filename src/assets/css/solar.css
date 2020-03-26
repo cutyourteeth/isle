@@ -1,9 +1,14 @@
-/*
-  Malik Dellidj - @Dathink
 
+body{
+    background: radial-gradient(ellipse at right, rgb(30, 39, 49) 0%, #050608 100%);
+    background-attachment: fixed;
+}
+
+/*
+  Solar.css was based on https://codepen.io/kowlor/pen/ZYYQoy?editors=0100
+  by Malik Dellidj - @Dathink
   Solar System orbit animation true time scaled
 */
-
 
 .solar-syst {
     width: 100%;
@@ -12,8 +17,6 @@
     bottom:-170px;
     min-height: 100vh;
     position: fixed;
-    background: radial-gradient(ellipse at right, rgb(30, 39, 49) 0%, #050608 100%);
-    background-attachment: fixed;
 }
 .solar-syst:after {
     content: '';

@@ -104,9 +104,6 @@ section {
     display: block;
 }
 
-body {
-    line-height: 1;
-}
 
 ol,
 ul {
@@ -132,11 +129,10 @@ table {
 }
 
 /* custom */
-html,
 body {
+    font-family: PingFangSC-light, 'Poppins', Helvetica, sans-serif;
     user-select: none;
-    background-color: #171717;
-    font-weight: 600;
+    line-height: 1;
 }
 
 a,
@@ -144,8 +140,4 @@ a:hover,
 a:visited {
     color: inherit;
     text-decoration: none;
-}
-
-body {
-    font-family: PingFangSC-light, 'Poppins', Helvetica, sans-serif;
 }

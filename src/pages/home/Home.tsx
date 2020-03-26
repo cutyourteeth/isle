@@ -23,7 +23,7 @@ export const Home = () => {
                         Caperal
                     </h1>
                     <br />
-                    <h2>Caper's cloudtown for </h2>
+                    <h2>Caper's spacetown for </h2>
                     <h2>Data Charts, React Library, Docs, Notes </h2>
                     <p>
                         For now, I'm developing &emsp;
