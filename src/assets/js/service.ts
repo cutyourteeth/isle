@@ -24,8 +24,8 @@ export interface HeartbeatDto {
  * @export
  */
 export default class ServerApi {
-    // public static serverUrl = 'https://caperal.cn:3141';
-    public static serverUrl = 'http://localhost:3141';
+    public static serverUrl = 'https://caperal.cn:3141';
+    // public static serverUrl = 'http://localhost:3141';
 
     public static async getListData<T = AxiosResponse<BaseDataQueryDto[]>>(api: string, name?: string) {
         let destination = name ? `${api}/${name}` : `${api}`;
