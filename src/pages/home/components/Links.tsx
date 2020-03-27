@@ -9,18 +9,18 @@ interface LinkInfo {
     staticUrl?: string;
     description?: string;
 }
-const technicLinks: LinkInfo[] = [
+const productionLinks: LinkInfo[] = [
     { staticUrl: 'https://gears.caperal.cn', name: 'Gearware', description: 'React UI library' },
     { staticUrl: 'https://kas.caperal.cn', name: 'Kaleidoscope', description: '一键生成Creo关系程序' },
 ];
 const personalLinks: LinkInfo[] = [
     { urlParam: 'graphs', name: 'Charts', description: 'From my data collector' },
+    { staticUrl: 'https://caperso.github.io/handnote/', name: 'Notes', description: 'My FE handnote' },
     { urlParam: 'thoughts', name: 'Thoughts', description: 'Hi secret garden' },
     { urlParam: 'about', name: 'About', description: 'Contact and more' },
 ];
 
 export const Links = () => {
-    // const location = useLocation();
     /**
      * find url whether at current or root or not
      * @param {string} param
@@ -45,7 +45,7 @@ export const Links = () => {
 
     return (
         <LinksWrapper>
-            {technicLinks.map(item => linkGenerator(item))}
+            {productionLinks.map(item => linkGenerator(item))}
             <Divide />
             {personalLinks.map(item => linkGenerator(item))}
             <Divide />
