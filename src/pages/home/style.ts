@@ -6,7 +6,7 @@ export const HomeWrapper = styled.div`
     min-height: 120vh;
 
     .title {
-        padding: 6rem 2rem 4rem;
+        padding: 4rem 2rem 4rem;
 
         .spot-light {
             position: relative;

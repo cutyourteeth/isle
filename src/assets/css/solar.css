@@ -1,5 +1,5 @@
 
-body{
+html,body{
     background: radial-gradient(ellipse at right, rgb(30, 39, 49) 0%, #050608 100%);
     background-attachment: fixed;
 }

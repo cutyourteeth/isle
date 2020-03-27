@@ -11,7 +11,7 @@ interface LinkInfo {
 }
 const technicLinks: LinkInfo[] = [
     { staticUrl: 'https://gears.caperal.cn', name: 'Gearware', description: 'React UI library' },
-    { staticUrl: 'https://gears.caperal.cn/zh-CN/', name: 'Gearware (zh-CN)', description: 'React 组件库' },
+    { staticUrl: 'https://gears.caperal.cn', name: 'Gearware (zh-CN)', description: 'React 组件库' },
 ];
 const personalLinks: LinkInfo[] = [
     { urlParam: 'graphs', name: 'Charts', description: 'From my data collector' },
