@@ -10,9 +10,8 @@ export const Graphs = () => {
         <div>
             <LinksWrapper>
                 <StyledLink to="/graphs/estate">Real Estate</StyledLink>
-                {/* TODO */}
-                {/* <StyledLink to="/graphs/price">Marketing</StyledLink> */}
                 <StyledLink to="/graphs/price">Price</StyledLink>
+                {/* TODO */}
                 <StyledLink to="/graphs/marketing">Marketing</StyledLink>
             </LinksWrapper>
             <Switch>
@@ -22,6 +21,7 @@ export const Graphs = () => {
                 <Route path="/graphs/price">
                     <PriceGraph />
                 </Route>
+                <Route path="/graphs/marketing">Market data not available still digging</Route>
             </Switch>
         </div>
     );
