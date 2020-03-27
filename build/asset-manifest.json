@@ -1,26 +1,26 @@
 {
   "files": {
-    "StockChart.js": "/static/js/StockChart.fe775319.chunk.js",
-    "StockChart.js.map": "/static/js/StockChart.fe775319.chunk.js.map",
-    "main.css": "/static/css/main.46b100a0.chunk.css",
-    "main.js": "/static/js/main.c5c1d2f7.chunk.js",
-    "main.js.map": "/static/js/main.c5c1d2f7.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4805b277.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4805b277.js.map",
-    "static/js/3.9160712c.chunk.js": "/static/js/3.9160712c.chunk.js",
-    "static/js/3.9160712c.chunk.js.map": "/static/js/3.9160712c.chunk.js.map",
-    "static/js/4.08c57b1c.chunk.js": "/static/js/4.08c57b1c.chunk.js",
-    "static/js/4.08c57b1c.chunk.js.map": "/static/js/4.08c57b1c.chunk.js.map",
+    "StockChart.js": "/static/js/StockChart.03a15f04.chunk.js",
+    "StockChart.js.map": "/static/js/StockChart.03a15f04.chunk.js.map",
+    "main.css": "/static/css/main.ad30a90f.chunk.css",
+    "main.js": "/static/js/main.f590b3d7.chunk.js",
+    "main.js.map": "/static/js/main.f590b3d7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0a808edd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0a808edd.js.map",
+    "static/js/3.2112ac7a.chunk.js": "/static/js/3.2112ac7a.chunk.js",
+    "static/js/3.2112ac7a.chunk.js.map": "/static/js/3.2112ac7a.chunk.js.map",
+    "static/js/4.b0aa36e1.chunk.js": "/static/js/4.b0aa36e1.chunk.js",
+    "static/js/4.b0aa36e1.chunk.js.map": "/static/js/4.b0aa36e1.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.19d1048179db836025e2c0ee27270586.js": "/precache-manifest.19d1048179db836025e2c0ee27270586.js",
+    "precache-manifest.cc70ac198e554b1075f4048817861ec0.js": "/precache-manifest.cc70ac198e554b1075f4048817861ec0.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.46b100a0.chunk.css.map": "/static/css/main.46b100a0.chunk.css.map",
+    "static/css/main.ad30a90f.chunk.css.map": "/static/css/main.ad30a90f.chunk.css.map",
     "static/media/reset.css": "/static/media/iconfont.9b3bebf1.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.4805b277.js",
-    "static/js/4.08c57b1c.chunk.js",
-    "static/css/main.46b100a0.chunk.css",
-    "static/js/main.c5c1d2f7.chunk.js"
+    "static/js/runtime-main.0a808edd.js",
+    "static/js/4.b0aa36e1.chunk.js",
+    "static/css/main.ad30a90f.chunk.css",
+    "static/js/main.f590b3d7.chunk.js"
   ]
 }
