@@ -18,12 +18,13 @@ body {
     min-height: 100vh;
     position: fixed;
 }
+
 .solar-syst:after {
     content: '';
     position: absolute;
     height: 2px;
     width: 2px;
-    top: -2px;
+    top: -25vh;
     background: white;
     box-shadow: 1231px 1650px 0 0px rgba(255, 255, 255, 0.862), 417px 779px 0 0px rgba(255, 255, 255, 0.763),
         621px 1232px 0 0px rgba(255, 255, 255, 0.038), 913px 541px 0 0px rgba(255, 255, 255, 0.039),
