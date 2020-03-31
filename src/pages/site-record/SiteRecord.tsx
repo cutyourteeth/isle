@@ -6,6 +6,10 @@ export const SiteRecord = () => {
         <SiteInfo>
             <p>
                 <span role="img" aria-label="emoji">
+                    ✨ Site Info ✨
+                    Build with React, using my own library: gearware;
+                    Automatic deploy with travis-ci and cronjob.
+                    Serve by Nodejs and Nginx.
                     ✨ Built with React & supported by Node on Nginx. &nbsp; ✨
                 </span>
                 <span role="img" aria-label="emoji"></span>
