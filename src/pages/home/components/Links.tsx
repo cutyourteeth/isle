@@ -11,12 +11,11 @@ interface LinkInfo {
 }
 const productionLinks: LinkInfo[] = [
     { staticUrl: 'https://gears.caperal.cn', name: 'Gearware', description: 'React UI library' },
-    { staticUrl: 'https://kas.caperal.cn', name: 'Kaleidoscope', description: '一键生成Creo关系程序' },
+    { staticUrl: '', name: 'Kaleidoscope', description: '一键生成Creo关系程序' },
 ];
 const personalLinks: LinkInfo[] = [
     { urlParam: 'graphs', name: 'Charts', description: 'From my data collector' },
     { staticUrl: 'https://caperso.github.io/handnote/', name: 'Notes', description: 'My FE handnote' },
-    { urlParam: 'thoughts', name: 'Thoughts', description: 'Hi secret garden' },
     { urlParam: 'about', name: 'About', description: 'Contact and more' },
 ];
 
@@ -27,7 +26,7 @@ export const Links = () => {
      * @returns
      */
     // const findReg = (param: string) => {
-    //     // eslint-disable-next-line no-useless-escape
+    //     eslint-disable-next-line no-useless-escape
     //     let reg = new RegExp(`^\/(${param})|(\/)$`, 'g');
     //     return location.pathname.match(reg);
     // };
@@ -56,6 +55,7 @@ export const Links = () => {
 const LinksWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    width: 655px;
     padding: 0 2rem;
     position: relative;
 `;
