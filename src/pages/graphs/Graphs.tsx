@@ -9,19 +9,19 @@ export const Graphs = () => {
     return (
         <div>
             <LinksWrapper>
-                <StyledLink to="/graphs/estate">Real Estate</StyledLink>
-                <StyledLink to="/graphs/price">Price</StyledLink>
+                <StyledLink to="/home/graphs/estate">Real Estate</StyledLink>
+                <StyledLink to="/home/graphs/price">Price</StyledLink>
                 {/* TODO */}
-                <StyledLink to="/graphs/marketing">Marketing</StyledLink>
+                <StyledLink to="/home/graphs/marketing">Marketing</StyledLink>
             </LinksWrapper>
             <Switch>
-                <Route path="/graphs/estate">
+                <Route path="/home/graphs/estate">
                     <EstateGraph />
                 </Route>
-                <Route path="/graphs/price">
+                <Route path="/home/graphs/price">
                     <PriceGraph />
                 </Route>
-                <Route path="/graphs/marketing">Market data not available still digging</Route>
+                <Route path="/home/graphs/marketing">Market data not available still digging</Route>
             </Switch>
         </div>
     );

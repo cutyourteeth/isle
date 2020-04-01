@@ -1,48 +1,36 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { About } from '../about/About';
 import { Graphs } from '../graphs/Graphs';
-import { Thoughts } from '../thoughts/Thoughts';
-import { HamButton } from './components/HamButton';
 import { Links } from './components/Links';
 import { HomeWrapper } from './style';
 
 export const Home = () => {
     return (
         <HomeWrapper>
-            <HashRouter>
-                <div className="header">
-                    <div className="header-left">CAPERAL</div>
-                    <div className="header-right">
-                        <HamButton />
-                    </div>
-                </div>
+            <div className="title">
+                <h1 className="spot-light" data-spotlight="Caperal">
+                    Caperal
+                </h1>
+                <br />
+                <h2>Caper's spacetown for </h2>
+                <h2>Data Charts, React Library, Docs, Notes </h2>
+                <p>
+                    For now, I'm developing &emsp;
+                    <span role="img" aria-label="gear">
+                        ⚙️ Gearware ⚙️
+                    </span>
+                </p>
+            </div>
 
-                <div className="title">
-                    <h1 className="spot-light" data-spotlight="Caperal">
-                        Caperal
-                    </h1>
-                    <br />
-                    <h2>Caper's spacetown for </h2>
-                    <h2>Data Charts, React Library, Docs, Notes </h2>
-                    <p>
-                        For now, I'm developing &emsp;
-                        <span role="img" aria-label="gear">
-                            ⚙️ Gearware ⚙️
-                        </span>
-                    </p>
-                </div>
+            <Links />
 
-                <Links />
-
-                <div className="main-view">
-                    <Switch>
-                        <Route path="/graphs" component={Graphs} />
-                        <Route path="/thoughts" component={Thoughts} />
-                        <Route path="/about" component={About} />
-                    </Switch>
-                </div>
-            </HashRouter>
+            <div className="main-view">
+                <Switch>
+                    <Route path="/home/graphs" component={Graphs} />
+                    <Route path="/home/about" component={About} />
+                </Switch>
+            </div>
         </HomeWrapper>
     );
 };

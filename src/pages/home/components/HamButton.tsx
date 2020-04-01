@@ -9,11 +9,11 @@ export const HamButton = () => {
     <HamWrapper>
       <i className="header-ham-button" onClick={showMenu} aria-label="menu"></i>
       <div className="header-links">
-        <Link to="/thoughts" className="header-link">
-          THOUGHTS
+        <Link to="/gallery" className="header-link">
+          MINNIE's GALLERY
         </Link>
-        <Link to="/about" className="header-link">
-          ABOUT
+        <Link to="/home" className="header-link">
+          HOME
         </Link>
       </div>
     </HamWrapper>
@@ -23,7 +23,7 @@ export const HamButton = () => {
 const HamWrapper = styled.div`
 .header-links > * {
         margin-left: 1rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.07rem;
       }
 
       .header-links > *:hover {

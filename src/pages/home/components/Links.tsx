@@ -14,9 +14,9 @@ const productionLinks: LinkInfo[] = [
     { staticUrl: '', name: 'Kaleidoscope', description: '一键生成Creo关系程序' },
 ];
 const personalLinks: LinkInfo[] = [
-    { urlParam: 'graphs', name: 'Charts', description: 'From my data collector' },
+    { urlParam: 'home/graphs', name: 'Charts', description: 'From my data collector' },
     { staticUrl: 'https://caperso.github.io/handnote/', name: 'Notes', description: 'My FE handnote' },
-    { urlParam: 'about', name: 'About', description: 'Contact and more' },
+    { urlParam: 'home/graphs', name: 'About', description: 'Contact and more' },
 ];
 
 export const Links = () => {
