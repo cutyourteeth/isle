@@ -1,5 +1,5 @@
 import { ImagePreview } from 'gearware';
-import 'gearware/lib/components/image-preview/ImagePreview.css';
+import 'gearware/lib/components/image-preview/index.css';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 

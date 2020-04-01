@@ -16,7 +16,7 @@
     "date-fns": "^2.9.0",
     "echarts": "^4.6.0",
     "echarts-for-react": "^2.0.15-beta.1",
-    "gearware": "0.1.8",
+    "gearware": "0.1.14",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router": "^5.1.2",

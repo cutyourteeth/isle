@@ -4546,10 +4546,10 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
-gearware@0.1.8:
-  version "0.1.8"
-  resolved "https://registry.npmjs.org/gearware/-/gearware-0.1.8.tgz#8d83a5f178fb002187b85c722e326cecc6c19b6c"
-  integrity sha512-tOCXYf1lEP8U7CDppHs3SIACWJf1qur6d8ZCNWREw8ggZQRQuJxAr6WhhRFGMweyFOZZqf3owj75ix4ucQBveQ==
+gearware@0.1.14:
+  version "0.1.14"
+  resolved "https://registry.npmjs.org/gearware/-/gearware-0.1.14.tgz#4b1781543cf178c531b5f96c7cbf8cd08411f3c2"
+  integrity sha512-meOlbAQxU+bhnLFieiYB7852w9OKPPbf8WvHvxwer+PatIHxkNqh2qtOWIDhvtavI1GaNM9qN17N+NMCTFIl2Q==
 
 get-caller-file@^1.0.1:
   version "1.0.3"
