@@ -32,7 +32,6 @@ const SiteInfo = styled.div`
     font-size: 12px;
     color: white;
     position: relative;
-    z-index: 100;
     &:hover > .site-text {
         background-color: rgba(0, 0, 0, 0.9);
     }
