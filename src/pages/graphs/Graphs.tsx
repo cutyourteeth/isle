@@ -1,13 +1,11 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import styled from 'styled-components';
 import { EstateGraph } from './EstateGraph';
 import { PriceGraph } from './PriceGraph';
 
 export const Graphs = () => {
     return (
         <div>
-
             <Switch>
                 <Route path="/home/graphs/estate">
                     <EstateGraph />
@@ -21,8 +19,3 @@ export const Graphs = () => {
     );
 };
 
-const LinksWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 0 2rem;
-`;

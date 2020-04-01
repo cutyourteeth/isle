@@ -20,9 +20,10 @@ const App: React.FC = () => {
                         <HamButton />
                     </div>
                 </div>
+                <Home />
                 <Switch>
                     <Redirect from="/" exact={true} to="/home" />
-                    <Route path="/home" component={Home} />
+                    {/* <Route path="/home" component={Home} /> */}
                     <Route path="/gallery" component={Gallery} />
                 </Switch>
                 <SiteRecord />
