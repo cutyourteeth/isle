@@ -43,7 +43,7 @@ export const Links = () => {
         <LinksWrapper>
             <Levels data={primaryLinks} />
             <Divide />
-            <Levels data={secondaryLinks} defaultExpanded={false} getCurrentActiveRoute={handleRouteChange} />
+            <Levels data={secondaryLinks} defaultExpanded={false} onChangeRoute={handleRouteChange} />
         </LinksWrapper>
     );
 };
