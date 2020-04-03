@@ -23,10 +23,28 @@ const secondaryLinks: Level[] = [
         description: 'From my data collector',
         deep: [
             { name: 'Real Estate', route: 'estate', description: 'House Stock' },
-            { name: 'Price', route: 'price', description: 'item price' },
+            { name: 'Price', route: 'price', description: 'Some Item Price' },
         ],
     },
-    { staticUrl: 'https://caperso.github.io/handnote/', name: 'Notes', description: 'My FE handnote' },
+    {
+        name: 'Notes',
+        description: 'My notes',
+        deep: [
+            {
+                name: 'FE Technics',
+                staticUrl: 'https://caperso.github.io/handnote/',
+                description: 'My FE handnote',
+            },
+            {
+                name: 'Node & Service',
+                description: 'Preparing',
+            },
+            {
+                name: 'C++ & Algorithm',
+                description: 'Preparing',
+            },
+        ],
+    },
     { route: 'about', name: 'About', description: 'Contact and more' },
 ];
 
