@@ -39,11 +39,16 @@ export const Links = () => {
         console.log(longRoute);
     };
 
+    const activeStyle: React.CSSProperties = {
+        color: 'white',
+        animation: 'none',
+    };
+
     return (
         <LinksWrapper>
             <Levels data={primaryLinks} />
             <Divide />
-            <Levels data={secondaryLinks} defaultExpanded={false} onChangeRoute={handleRouteChange} />
+            <Levels data={secondaryLinks} singleActiveStyle={activeStyle} defaultExpanded={false} onChangeRoute={handleRouteChange} />
         </LinksWrapper>
     );
 };
