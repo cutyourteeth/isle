@@ -9,10 +9,11 @@ import { Divide } from './Divide';
 const primaryLinks: Level[] = [
     {
         name: 'Gearware',
+        route: 'gears',
         staticUrl: 'https://gears.caperal.cn',
         description: 'React UI library',
     },
-    { name: 'Kaleidoscope', description: '一键生成Creo关系程序' },
+    { name: 'Kaleidoscope', route: 'kai', description: '一键生成Creo关系程序' },
 ];
 
 const secondaryLinks: Level[] = [

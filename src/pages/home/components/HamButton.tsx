@@ -103,4 +103,4 @@ const HamWrapper = styled.div`
         }
       }
     }
-`;
+`
