@@ -14,7 +14,7 @@ interface Props {
 }
 
 const EChartGenerator = (props: Props) => {
-    return <ReactEchartsCore echarts={echarts} option={chartDataGenerator(props.data)} />;
+    return <ReactEchartsCore className='chart-item' echarts={echarts} option={chartDataGenerator(props.data)} />;
 };
 
 export default EChartGenerator;
@@ -30,13 +30,16 @@ const chartDataGenerator = (data: AxisData) => {
     return {
         tooltip: {
             trigger: 'axis',
-            position: function(pt: any) {
+            position: function (pt: any) {
                 return [pt[0], '10%'];
             },
         },
         title: {
-            left: 'center',
-            text: `source from ${name}`,
+            left: 'left',
+            text: `${name}`,
+            textStyle: {
+                color: 'white',
+            },
         },
         toolbox: {
             feature: {
@@ -51,11 +54,13 @@ const chartDataGenerator = (data: AxisData) => {
             type: 'category',
             boundaryGap: false,
             data: xValue,
+            axisLabel: { color: 'white' },
         },
         yAxis: {
             scale: true,
             type: 'value',
             boundaryGap: [0, '100%'],
+            axisLabel: { color: 'white' },
         },
         dataZoom: [
             {
@@ -92,15 +97,14 @@ const chartDataGenerator = (data: AxisData) => {
                     color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
                         {
                             offset: 0,
-                            color: '#FD6585'
+                            color: '#FD6585',
                         },
-                        
 
                         {
                             offset: 1,
-                            color: '#0D25B9'
-                        }
-                    ])
+                            color: '#0D25B9',
+                        },
+                    ]),
                 },
                 data: yValue,
             },

@@ -14,7 +14,7 @@ const Home = () => {
                 </h1>
                 <br />
                 <h2>Caper's spacetown for </h2>
-                <h2>Data Charts, React Library, Docs, Notes </h2>
+                <h2>Data Charts, Notes, React Library, Docs</h2>
                 <p>
                     For now, I'm developing &emsp;
                     <span role="img" aria-label="gear">
