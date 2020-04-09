@@ -24,7 +24,7 @@ const postInfos = [
     },
 ];
 
-export const Gallery = () => {
+const Gallery = () => {
     const [visible, setVisible] = useState(false);
     const [url, setUrl] = useState('');
     const onClose = () => {
@@ -56,7 +56,7 @@ export const GalleryWrapper = styled.div`
         margin: 2rem 0;
         box-sizing: border-box;
         position: relative;
-        overflow:hidden;
+        overflow: hidden;
 
         &:hover::after {
             content: attr(data-hover);
@@ -80,3 +80,5 @@ export const GalleryWrapper = styled.div`
         box-sizing: border-box;
     }
 `;
+
+export default Gallery;

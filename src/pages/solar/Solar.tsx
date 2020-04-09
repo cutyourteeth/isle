@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../assets/css/solar.css';
 
-export const Solar = () => {
+const Solar = () => {
     return (
         <div className="solar-syst">
             <div className="sun"></div>
@@ -18,3 +18,5 @@ export const Solar = () => {
         </div>
     );
 };
+
+export default Solar;

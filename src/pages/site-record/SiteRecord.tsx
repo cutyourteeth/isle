@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const SiteRecord = () => {
+ const SiteRecord = () => {
     return (
         <SiteInfo>
             <div className="site-text">
@@ -62,3 +62,5 @@ const Anchor = styled.a`
         color: goldenrod;
     }
 `;
+
+export default SiteRecord

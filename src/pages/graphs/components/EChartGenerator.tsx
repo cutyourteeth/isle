@@ -80,25 +80,27 @@ const chartDataGenerator = (data: AxisData) => {
         ],
         series: [
             {
-                name: 'Total amount',
+                name: 'total',
                 type: 'line',
                 smooth: true,
                 symbol: 'none',
                 sampling: 'average',
                 itemStyle: {
-                    color: 'rgb(255, 70, 131)',
+                    color: '#FD658580',
                 },
                 areaStyle: {
-                    // color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                    //     {
-                    //         offset: 0,
-                    //         color: 'rgb(255, 158, 68)'
-                    //     },
-                    //     {
-                    //         offset: 1,
-                    //         color: 'rgb(255, 70, 131)'
-                    //     }
-                    // ])
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: '#FD6585'
+                        },
+                        
+
+                        {
+                            offset: 1,
+                            color: '#0D25B9'
+                        }
+                    ])
                 },
                 data: yValue,
             },

@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 import { HashRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import './assets/css/solar.css';
 import { Heartbeat } from './components/core/Heartbeat';
-import { Gallery } from './pages/gallery/Gallery';
 import { HamButton } from './pages/home/components/HamButton';
-import { Home } from './pages/home/Home';
-import { SiteRecord } from './pages/site-record/SiteRecord';
-import { Solar } from './pages/solar/Solar';
+
+const Gallery = React.lazy(() => import('./pages/gallery/Gallery'));
+const Home = lazy(() => import('./pages/home/Home'));
+const SiteRecord = lazy(() => import('./pages/site-record/SiteRecord'));
+const Solar = lazy(() => import('./pages/solar/Solar'));
 
 const App: React.FC = () => {
     return (
@@ -20,13 +21,15 @@ const App: React.FC = () => {
                         <HamButton />
                     </div>
                 </div>
-                <Switch>
-                    <Redirect from="/" exact={true} to="/home" />
-                    <Route path="/home" component={Home} />
-                    <Route path="/gallery" component={Gallery} />
-                </Switch>
-                <SiteRecord />
-                <Solar />
+                <React.Suspense fallback={<div>loading...</div>}>
+                    <Switch>
+                        <Redirect from="/" exact={true} to="/home" />
+                        <Route path="/home" component={Home} />
+                        <Route path="/gallery" component={Gallery} />
+                    </Switch>
+                    <SiteRecord />
+                    <Solar />
+                </React.Suspense>
                 <Heartbeat />
             </HashRouter>
         </AppWrapper>
@@ -39,7 +42,7 @@ const AppWrapper = styled.div`
     width: 90vw;
     max-width: 1000px;
     margin: 0 auto;
-    
+
     .header {
         display: flex;
         flex-flow: row nowrap;

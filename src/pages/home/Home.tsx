@@ -5,7 +5,7 @@ import { Graphs } from '../graphs/Graphs';
 import { Links } from './components/Links';
 import { HomeWrapper } from './style';
 
-export const Home = () => {
+const Home = () => {
     return (
         <HomeWrapper>
             <div className="title">
@@ -34,3 +34,5 @@ export const Home = () => {
         </HomeWrapper>
     );
 };
+
+export default Home;
