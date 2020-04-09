@@ -4,10 +4,13 @@ export const HomeWrapper = styled.div`
     position: relative;
     color: white;
     min-height: 120vh;
-    z-index:1;
+    z-index: 1;
 
     .title {
-        padding: 4rem 2rem 4rem;
+        padding: 10rem 2rem 4rem;
+        @media screen and (max-height: 920px) {
+            padding: 4rem 2rem 4rem;
+        }
 
         .spot-light {
             position: relative;

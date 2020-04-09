@@ -36,6 +36,10 @@ const App: React.FC = () => {
 export default App;
 
 const AppWrapper = styled.div`
+    width: 90vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    
     .header {
         display: flex;
         flex-flow: row nowrap;
