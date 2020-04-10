@@ -5,8 +5,8 @@
     "StockChart.js": "/static/js/StockChart.7df03389.chunk.js",
     "StockChart.js.map": "/static/js/StockChart.7df03389.chunk.js.map",
     "main.css": "/static/css/main.db7757ee.chunk.css",
-    "main.js": "/static/js/main.65656e29.chunk.js",
-    "main.js.map": "/static/js/main.65656e29.chunk.js.map",
+    "main.js": "/static/js/main.1e1d3bec.chunk.js",
+    "main.js.map": "/static/js/main.1e1d3bec.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e8db2b0a.js",
     "runtime-main.js.map": "/static/js/runtime-main.e8db2b0a.js.map",
     "static/js/4.b6760bbd.chunk.js": "/static/js/4.b6760bbd.chunk.js",
@@ -26,7 +26,7 @@
     "static/js/10.bab32ced.chunk.js": "/static/js/10.bab32ced.chunk.js",
     "static/js/10.bab32ced.chunk.js.map": "/static/js/10.bab32ced.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.5ae8c0deefa07a5463c10474d4f75408.js": "/precache-manifest.5ae8c0deefa07a5463c10474d4f75408.js",
+    "precache-manifest.7ec6b16167d13fe2b9f439dd10379979.js": "/precache-manifest.7ec6b16167d13fe2b9f439dd10379979.js",
     "service-worker.js": "/service-worker.js",
     "static/css/6.1980fa92.chunk.css.map": "/static/css/6.1980fa92.chunk.css.map",
     "static/css/7.21d49100.chunk.css.map": "/static/css/7.21d49100.chunk.css.map",
@@ -38,6 +38,6 @@
     "static/js/runtime-main.e8db2b0a.js",
     "static/js/5.854297fb.chunk.js",
     "static/css/main.db7757ee.chunk.css",
-    "static/js/main.65656e29.chunk.js"
+    "static/js/main.1e1d3bec.chunk.js"
   ]
 }
