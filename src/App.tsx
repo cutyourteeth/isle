@@ -39,9 +39,12 @@ const App: React.FC = () => {
 export default App;
 
 const AppWrapper = styled.div`
-    width: 90vw;
-    max-width: 1000px;
-    margin: 0 auto;
+    overflow-x: hidden;
+    @media screen and (min-width: 1000px) {
+        width: 90vw;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
 
     .header {
         display: flex;
