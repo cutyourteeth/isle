@@ -6,7 +6,7 @@ import './assets/css/solar.css';
 import { Heartbeat } from './components/core/Heartbeat';
 import { HamButton } from './pages/home/components/HamButton';
 
-const Gallery = React.lazy(() => import('./pages/gallery/Gallery'));
+const GalleryPage = React.lazy(() => import('./pages/gallery/Gallery'));
 const Home = lazy(() => import('./pages/home/Home'));
 const SiteRecord = lazy(() => import('./pages/site-record/SiteRecord'));
 const Solar = lazy(() => import('./pages/solar/Solar'));
@@ -25,7 +25,7 @@ const App: React.FC = () => {
                     <Switch>
                         <Redirect from="/" exact={true} to="/home" />
                         <Route path="/home" component={Home} />
-                        <Route path="/gallery" component={Gallery} />
+                        <Route path="/gallery" component={GalleryPage} />
                     </Switch>
                     <SiteRecord />
                     <Solar />

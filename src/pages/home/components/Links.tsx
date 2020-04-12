@@ -1,6 +1,6 @@
 import { Levels } from 'gearware';
-import 'gearware/lib/components/levels/index.css';
-import { Level } from 'gearware/lib/components/levels/Levels';
+import 'gearware/lib/components/maintaining/levels/index.css';
+import { Level } from 'gearware/lib/components/maintaining/levels/Levels';
 import React from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
