@@ -46,7 +46,6 @@ const photoQuery = [
     'https://s1.ax1x.com/2020/04/12/GqX56S.jpg',
     'https://s1.ax1x.com/2020/04/12/GqX4l8.jpg',
     'https://s1.ax1x.com/2020/04/12/GqXhSf.jpg',
-    'https://s1.ax1x.com/2020/03/28/GFfufU.jpg',
 ];
 
 const GalleryPage = () => {
